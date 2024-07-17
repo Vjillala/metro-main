@@ -1,0 +1,49 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0 0 0 / 50%);
+}
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow: auto;
+
+  max-height: calc(100% - 50px);
+  min-width: calc(100% - 300px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-dark-500);
+}
+
+.closeButton {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+
+  transition: var(--color-dark-100) background-color;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-dark-100);
+    outline: none;
+    box-shadow: 0 0 0 4px var(--color-dark-100);
+  }
+}

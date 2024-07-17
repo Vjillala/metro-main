@@ -1,0 +1,36 @@
+.root {
+  position: fixed;
+  z-index: auto;
+  height: 60px;
+  padding: 5px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--color-dark-700);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.logo {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.userInHeader {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.headerUserName {
+  border-bottom: 2px dashed var(--color-light-100);
+}

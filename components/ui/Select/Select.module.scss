@@ -1,0 +1,128 @@
+/* reset */
+button {
+  all: unset;
+}
+
+.selectTitle {
+  font-size: 14px;
+  color: var(--color-dark-100);
+}
+
+.selectTrigger {
+  cursor: pointer;
+
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 34px;
+  padding: 0 12px;
+
+  font-size: var(--font-size-m);
+  color: var(--color-light-100);
+
+  background-color: transparent;
+  border: 1px solid var(--color-dark-300);
+  border-radius: 2px;
+  outline: none;
+
+  &:hover {
+    background-color: var(--color-dark-500);
+    border: 1px solid var(--color-dark-100);
+  }
+
+  &[data-placeholder] {
+    color: var(--color-light-100);
+  }
+
+  &:focus-visible {
+    border: 1px solid var(--color-info-700);
+    outline: 1px solid var(--color-info-700);
+  }
+
+  &:disabled {
+    cursor: default;
+    color: var(--color-dark-300);
+    background-color: transparent;
+    border: 1px solid var(--color-dark-300);
+  }
+
+  &.small {
+    gap: 2px;
+    height: 24px;
+    width: 52px;
+    padding: 0 2px 0 8px;
+    font-size: var(--font-size-s);
+  }
+}
+
+.selectTriggerOpen {
+  border: 1px solid var(--color-dark-100);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.selectIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.selectIcon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.selectContent {
+  position: relative;
+  top: -1px;
+  background-color: transparent;
+}
+
+.selectViewport {
+  cursor: pointer;
+
+  width: var(--radix-select-trigger-width);
+
+  background-color: var(--color-dark-900);
+  border: 1px solid var(--color-dark-300);
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+
+  &.small {
+    height: 24px;
+    width: var(--radix-select-trigger-width);
+    font-size: var(--font-size-s);
+  }
+}
+
+.selectViewportOpen {
+  border: 1px solid var(--color-dark-100);
+}
+
+.selectItem {
+  user-select: none;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 36px;
+  padding: 0 12px;
+
+  outline: none;
+
+  &.small {
+    padding: 0 0.4rem;
+    font-size: var(--font-size-s);
+  }
+}
+
+.selectItem[data-highlighted] {
+  color: var(--color-accent-300);
+  background-color: var(--color-accent-900);
+  outline: none;
+}

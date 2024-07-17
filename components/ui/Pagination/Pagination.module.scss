@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.button {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 2px;
+  color: var(--color-light-100);
+  text-decoration: none;
+
+  &.disabled, &:disabled {
+    color: var(--color-dark-300);
+    cursor: unset;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-info-700);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-dark-500);
+  }
+
+  &:active:not(:disabled),
+  &.active {
+    color: var(--color-dark-900);
+    background-color: var(--color-light-100);
+  }
+}
+
+.dots {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 2px;
+  color: var(--color-light-100);
+  text-decoration: none;
+}
+
+.selectBlock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

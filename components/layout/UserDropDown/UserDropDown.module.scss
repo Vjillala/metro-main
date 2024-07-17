@@ -1,0 +1,14 @@
+.link {
+  color: var(--color-light-100);
+  text-decoration: none;
+}
+
+.photoAndEmail {
+  pointer-events: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-right: 20px;
+}

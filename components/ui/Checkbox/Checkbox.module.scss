@@ -1,0 +1,118 @@
+/* reset */
+button {
+  all: unset;
+}
+
+.root {
+  display: flex;
+}
+
+.checkboxRoot {
+  all: unset;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 15px;
+  height: 15px;
+
+  border: 3px solid var(--color-light-900);
+  border-radius: 4px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+
+    display: none;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-dark-500);
+
+    &::before {
+      display: inline-block;
+      background-color: var(--color-dark-500);
+    }
+  }
+
+  &:active {
+    background-color: var(--color-dark-100);
+
+    &::before {
+      display: inline-block;
+      background-color: var(--color-dark-100);
+    }
+  }
+
+  &:disabled {
+    &::before {
+      display: none;
+      background-color: transparent;
+    }
+  }
+
+  &:focus-visible {
+    background-color: var(--color-dark-100);
+
+    &::before {
+      display: inline-block;
+      background-color: var(--color-dark-100);
+    }
+  }
+}
+
+.checkboxIndicator {
+  width: 21px;
+  height: 21px;
+
+  color: var(--color-dark-900);
+
+  background-color: var(--color-light-100);
+  border-radius: 4px;
+}
+
+.borderDisabled {
+  border: 3px solid var(--color-dark-100);
+
+  &:hover {
+    cursor: default;
+    background-color: transparent;
+  }
+}
+
+.indicatorDisabled {
+  color: var(--color-light-100);
+  background-color: var(--color-dark-100);
+}
+
+.checkboxIndicator svg {
+  width: 21px;
+  height: 21px;
+}
+
+.label {
+  margin-left: 11px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.labelDisabled {
+  color: var(--color-dark-100);
+
+  &:hover {
+    cursor: default;
+  }
+}
